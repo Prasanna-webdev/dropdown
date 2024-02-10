@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dropdown Navbar</title>
+    <style>
+        /* Resetting some default styles for better aesthetics */
+        body, ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin-top: 50px; /* Ensure content does not overlap with the fixed navbar */
+        }
+
+        /* Styling the Navigation Bar */
+        .navbar {
+            background-color: #3498db; /* Set background color */
+            overflow: hidden; /* Clear floats */
+        }
+
+        /* Style for navbar links */
+        .navbar a {
+            float: left; /* Float the links to the left for horizontal alignment */
+            display: block; /* Convert links to block elements for styling */
+            color: white;
+            text-align: center;
+            padding: 14px 16px; /* Add padding for better clickability */
+            text-decoration: none;
+        }
+
+        /* Change color on hover */
+        .navbar a:hover {
+            background-color: #555;
+        }
+
+        /* Dropdown container */
+        .dropdown {
+            float: left; /* Float the dropdown to the left */
+            overflow: hidden; /* Hide content that overflows the container */
+        }
+
+        /* Style for the dropdown button */
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit; /* Inherit background color from the navbar */
+            font-family: inherit; /* Inherit font from the navbar */
+            margin: 0; /* Remove margin to align with navbar */
+        }
+
+        /* Style for the dropdown content */
+        .dropdown-content {
+            display: none; /* Initially hide the dropdown content */
+            position: absolute; /* Position it absolutely to the dropdown button */
+            background-color: #f9f9f9; /* Set background color for the dropdown */
+            min-width: 160px; /* Set a minimum width */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Add a subtle box shadow */
+            z-index: 1; /* Ensure the dropdown is on top of other elements */
+        }
+
+        /* Style for the dropdown links */
+        .dropdown-content a {
+            float: none; /* Remove the floating effect */
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block; /* Convert links to block elements for styling */
+            text-align: left;
+        }
+
+        /* Change color on hover for dropdown links */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* Show the dropdown content when hovering over the dropdown button */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Add a caret icon for the dropdown button */
+        .caret {
+            margin-left: 5px;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+
+    <!-- Dropdown container -->
+    <div class="dropdown">
+        <button class="dropbtn">Services<span class="caret">&#9660;</span></button>
+        <!-- Dropdown content -->
+        <div class="dropdown-content">
+            <a href="#service1">Service 1</a>
+            <a href="#service2">Service 2</a>
+            <a href="#service3">Service 3</a>
+        </div>
+    </div>
+
+    <a href="#portfolio">Portfolio</a>
+    <a href="#contact">Contact</a>
+</div>
+
+<!-- Content goes here -->
+
+</body>
+</html>
